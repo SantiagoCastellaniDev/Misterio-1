@@ -1,0 +1,128 @@
+body {
+    margin:0 auto;
+    background: black;
+    display:flex;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+.presentacion {
+    color:rgb(170, 64, 212);
+    font-size: 2rem;
+    text-align:center;
+    margin:0 auto;
+    font-family: 'Pattaya', sans-serif;
+}
+.presentacion h1 span {
+    font-size:3rem;
+}
+
+
+.iniciar {
+    color:white;
+    font-size: 2rem;
+    text-align:center;
+    margin:0 auto;
+    margin-top:100px;
+    display:block;
+}
+.iniciar a{
+    text-decoration: none;
+    color:yellow;
+}
+.iniciar a:hover {
+    color:green;
+    cursor:pointer;
+}
+.iniciar p {
+    font-size: 1rem;
+    color:grey
+    
+}
+
+.animate__animated.animate__bounce {
+    --animate-duration: 1s;
+}
+
+.parpadea {
+  
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+
+
+/*-------CUBO------*/
+.contenedor {
+    margin:25px auto;
+    perspective: 700px;
+    perspective-origin: -100px 0px;
+}
+.cubo {
+    position: relative;
+    width:150px;
+    height:150px;
+    transform-style:preserve-3d;    
+    animation: girar 10s infinite linear;
+}
+.cara {
+    position: absolute;
+    width:100%;
+    height:100%;
+    border: 5px solid black
+}
+#uno {
+    background:yellow;
+    transform:translateZ(75px);
+}
+#dos {
+    background:red;
+    transform:translateX(75px) rotateY(90deg) ;
+}
+#tres {
+    background:lightblue;
+    transform:translateZ(-75px);
+}
+#cuatro {
+    background:orangered;
+    transform:translateX(-75px) rotateY(90deg);
+}
+#cinco {
+    background: blue;
+    transform:translateY(-75px) rotateX(90deg);
+}
+#seis {
+    background: green;
+    transform:translateY(75px) rotateX(90deg);
+}
+
+@keyframes girar {
+    from {transform:rotateY(0) rotateX(0)}
+    to {transform:rotateY(360deg) rotateX(360deg)}
+}
+
